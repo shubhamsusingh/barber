@@ -1,5 +1,12 @@
  @extends('layouts.main')
  @section('content')
+     <style>
+         #map {
+             height: 500px;
+             width: 100%;
+         }
+     </style>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
      <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
 
          <div class="container">
@@ -393,4 +400,22 @@
              </div>
          </div>
      </section>
+     <h2>Leaflet Map Example</h2>
+     <div id="map"></div>
+     @push('scripts')
+         <script>
+             // Initialize map
+             var map = L.map('map').setView([28.6139, 77.2090], 13); // New Delhi
+
+             // Add OpenStreetMap tile layer
+             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                 attribution: '&copy; OpenStreetMap contributors'
+             }).addTo(map);
+
+             // Add a marker
+             L.marker([28.6139, 77.2090]).addTo(map)
+                 .bindPopup('New Delhi')
+                 .openPopup();
+         </script>
+     @endpush
  @endsection
