@@ -385,7 +385,8 @@
 
                      <div class="col-lg-12 col-12 mx-auto mt-5 pt-5" id="map">
                          {{-- <div id="map"></div> --}}
-                         <select class="map-view-select" id="mapLayer">
+                         <select class="map-view-select" id="mapLayer"
+                             style="position: absolute;z-index:1000;top: 10px; right: 10px;">
                              <option value="google">Google</option>
                              <option value="satellite">Satellite</option>
                          </select>
@@ -401,12 +402,25 @@
          <script>
              // Initialize map
              var map = L.map('map').setView([24.8505250, 84.4314900], 13); // New Delhi
-
+             setMapLayer();
              // Add OpenStreetMap tile layer
-             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                 attribution: '&copy; OpenStreetMap contributors'
-             }).addTo(map);
+             function setMapLayer(view = "google") {
+                 if (view === "google") {
+                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                         attribution: '&copy; OpenStreetMap contributors'
+                     }).addTo(map);
 
+                 } else {
+                     L.tileLayer("https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", {
+                         maxZoom: 50,
+                         subdomains: ["mt0", "mt1", "mt2", "mt3"],
+                     }).addTo(map);
+                 }
+             }
+             $(document).on("change", "#mapLayer", function() {
+                 const layer = $(this).val();
+                 setMapLayer(layer);
+             });
              // Add a marker
              L.marker([24.8505250, 84.4314900]).addTo(map)
                  .bindPopup('sohraiya')
