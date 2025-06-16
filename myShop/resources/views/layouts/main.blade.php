@@ -11,6 +11,14 @@
     <title>Gentlemen's Barber Shop - HTML CSS Template</title>
 
     <!-- CSS FILES -->
+
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,10 +143,13 @@ https://templatemo.com/tm-585-barber-shop
     </div>
 
     <!-- JAVASCRIPT FILES -->
+
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/click-scroll.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    @stack('scripts')
 
 </body>
 
