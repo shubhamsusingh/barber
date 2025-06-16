@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link href="{{ asset('assets/css/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/templatemo-barber-shop.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ asset('assets/images/templatemo-barber-logo.png') }}" type="image/x-icon" />
 
     <!--
 
