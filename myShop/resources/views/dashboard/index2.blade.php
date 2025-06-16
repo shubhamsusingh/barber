@@ -385,7 +385,8 @@
 
                      <div class="col-lg-12 col-12 mx-auto mt-5 pt-5" id="map">
                          {{-- <div id="map"></div> --}}
-                         <select class="map-view-select" id="mapLayer">
+                         <select class="map-view-select" id="mapLayer"
+                             style="position: absolute;z-index:1000;top: 10px; right: 10px;">
                              <option value="google">Google</option>
                              <option value="satellite">Satellite</option>
                          </select>
