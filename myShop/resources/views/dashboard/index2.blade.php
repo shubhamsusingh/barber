@@ -1,11 +1,5 @@
  @extends('layouts.main')
  @section('content')
-     <style>
-         #map {
-             height: 500px;
-             width: 100%;
-         }
-     </style>
      <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
 
          <div class="container">
@@ -42,10 +36,11 @@
                      <h2 class="mb-4">Best hairdressers</h2>
 
                      <div class="border-bottom pb-3 mb-5">
-                         <p>Gentlemen's Barber Shop is new Bootstrap v5 HTML CSS template by <a
-                                 href="https://templatemo.com/page/1" target="_blank">TemplateMo</a> for
-                             everyone. There is a sidebar menu to navigate the one-page layout. You can feel
-                             free to adapt this template for your business.</p>
+                         <p>Welcome to MYShop, where style meets tradition. We offer top-quality haircuts, beard
+                             trims, and grooming services in a clean, comfortable, and modern setting. Whether you're
+                             looking for a fresh fade, a classic cut, or a sharp beard lineup, our skilled barbers are here
+                             to help you look and feel your best. Walk-ins are always welcome—come experience the
+                             difference!</p>
                      </div>
                  </div>
 
@@ -388,19 +383,20 @@
                          </div>
                      </div>
 
-                     <div class="col-lg-12 col-12 mx-auto mt-5 pt-5">
-                         <iframe class="google-map"
-                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7702.122299518348!2d13.396786616231472!3d52.531268574169616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85180d9075183%3A0xbba8c62c3dc41a7d!2sBarbabella%20Barbershop!5e1!3m2!1sen!2sth!4v1673886261201!5m2!1sen!2sth"
-                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                             referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     <div class="col-lg-12 col-12 mx-auto mt-5 pt-5" id="map">
+                         {{-- <div id="map"></div> --}}
+                         <select class="map-view-select" id="mapLayer">
+                             <option value="google">Google</option>
+                             <option value="satellite">Satellite</option>
+                         </select>
                      </div>
 
                  </div>
              </div>
          </div>
      </section>
-     <h2>Leaflet Map Example</h2>
-     <div id="map"></div>
+     {{-- <h2>Leaflet Map Example</h2> --}}
+     {{-- <div id="map"></div> --}}
      @push('scripts')
          <script>
              // Initialize map
