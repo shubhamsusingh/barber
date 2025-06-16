@@ -60,23 +60,23 @@ https://templatemo.com/tm-585-barber-shop
 
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            <a class="nav-link click-scroll" href="{{ route('dashboard') }}">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">Our Story</a>
+                            <a class="nav-link" href="{{ route('story') }}">Our Story</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Services</a>
+                            <a class="nav-link" href="{{ route('service') }}">Services</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Price List</a>
+                            <a class="nav-link " href="{{ route('price') }}">Price List</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                            <a class="nav-link" href="{{ route('contect') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
