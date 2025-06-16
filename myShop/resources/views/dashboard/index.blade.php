@@ -101,8 +101,8 @@ https://templatemo.com/tm-585-barber-shop
                     </div>
 
                     <div class="custom-block d-lg-flex flex-column justify-content-center align-items-center">
-                        <img src="images/vintage-chair-barbershop.jpg" class="custom-block-image img-fluid"
-                            alt="">
+                        <img src="{{ asset('assets/images/vintage-chair-barbershop.jpg') }}"
+                            class="custom-block-image img-fluid" alt="">
 
                         <h4><strong class="text-white">Hurry Up! Get good haircut.</strong></h4>
 
@@ -211,52 +211,50 @@ https://templatemo.com/tm-585-barber-shop
 
                             <div class="col-lg-6 col-12 mb-4">
                                 <div class="services-thumb">
-                                    <img src="images/services/woman-cutting-hair-man-salon.jpg"
+                                    <img src="{{ asset('assets/images/services/woman-cutting-hair-man-salon.jpg') }}"
                                         class="services-image img-fluid" alt="">
-
                                     <div class="services-info d-flex align-items-end">
                                         <h4 class="mb-0">Hair cut</h4>
 
-                                        <strong class="services-thumb-price">$36.00</strong>
+                                        <strong class="services-thumb-price">₹80.00</strong>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-12 mb-4">
                                 <div class="services-thumb">
-                                    <img src="images/services/hairdresser-grooming-their-client.jpg"
+                                    <img src="{{ asset('assets/images/services/hairdresser-grooming-their-client.jpg') }}"
                                         class="services-image img-fluid" alt="">
-
                                     <div class="services-info d-flex align-items-end">
                                         <h4 class="mb-0">Washing</h4>
 
-                                        <strong class="services-thumb-price">$25.00</strong>
+                                        <strong class="services-thumb-price">₹50.00</strong>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-12 mb-4 mb-lg-0">
                                 <div class="services-thumb">
-                                    <img src="images/services/hairdresser-grooming-client.jpg"
+                                    <img src="{{ asset('assets/images/services/hairdresser-grooming-client.jpg') }}"
                                         class="services-image img-fluid" alt="">
 
                                     <div class="services-info d-flex align-items-end">
                                         <h4 class="mb-0">Shaves</h4>
 
-                                        <strong class="services-thumb-price">$30.00</strong>
+                                        <strong class="services-thumb-price">₹30.00</strong>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-12">
                                 <div class="services-thumb">
-                                    <img src="images/services/boy-getting-haircut-salon-front-view.jpg"
+                                    <img src="{{ asset('assets/images/services/boy-getting-haircut-salon-front-view.jpg') }}"
                                         class="services-image img-fluid" alt="">
 
                                     <div class="services-info d-flex align-items-end">
                                         <h4 class="mb-0">Kids</h4>
 
-                                        <strong class="services-thumb-price">$25.00</strong>
+                                        <strong class="services-thumb-price">₹50.00</strong>
                                     </div>
                                 </div>
                             </div>
@@ -339,7 +337,7 @@ https://templatemo.com/tm-585-barber-shop
                                     <div class="mb-4">
                                         <h2 class="mb-2">Price List</h2>
 
-                                        <strong>Starting at $25</strong>
+                                        <strong>Starting at ₹50</strong>
                                     </div>
 
                                     <div class="price-list-thumb">
@@ -347,7 +345,7 @@ https://templatemo.com/tm-585-barber-shop
                                             Haircut
                                             <span class="price-list-thumb-divider"></span>
 
-                                            <strong>$32.00</strong>
+                                            <strong>₹80</strong>
                                         </h6>
                                     </div>
 
@@ -356,7 +354,7 @@ https://templatemo.com/tm-585-barber-shop
                                             Beard Trim
                                             <span class="price-list-thumb-divider"></span>
 
-                                            <strong>$26.00</strong>
+                                            <strong>₹50.00</strong>
                                         </h6>
                                     </div>
 
@@ -365,7 +363,7 @@ https://templatemo.com/tm-585-barber-shop
                                             Razor Cut
                                             <span class="price-list-thumb-divider"></span>
 
-                                            <strong>$36.00</strong>
+                                            <strong>₹30.00</strong>
                                         </h6>
                                     </div>
 
@@ -374,7 +372,7 @@ https://templatemo.com/tm-585-barber-shop
                                             Shaves
                                             <span class="price-list-thumb-divider"></span>
 
-                                            <strong>$30.00</strong>
+                                            <strong>₹30.00</strong>
                                         </h6>
                                     </div>
 
@@ -383,7 +381,7 @@ https://templatemo.com/tm-585-barber-shop
                                             Styling / Color
                                             <span class="price-list-thumb-divider"></span>
 
-                                            <strong>$25.00</strong>
+                                            <strong>₹100.00</strong>
                                         </h6>
                                     </div>
                                 </div>
@@ -391,7 +389,7 @@ https://templatemo.com/tm-585-barber-shop
 
                             <div
                                 class="col-lg-4 col-12 custom-block-bg-overlay-wrap mt-5 mb-5 mb-lg-0 mt-lg-0 pt-3 pt-lg-0">
-                                <img src="{{ 'assets/images/vintage-chair-barbershop.jpg' }}"
+                                <img src="{{ asset('assets/images/vintage-chair-barbershop.jpg') }}"
                                     class="custom-block-bg-overlay-image img-fluid" alt="">
 
                             </div>
