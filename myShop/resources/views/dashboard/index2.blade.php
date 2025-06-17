@@ -202,16 +202,16 @@
                                  </div>
 
                                  <div class="col-lg-6 col-12">
-                                     <input type="tel" class="form-control" name="bb-phone"
+                                     <input type="tel" class="form-control" name="phone"
                                          placeholder="Mobile 010-020-0340" required="">
                                  </div>
 
                                  <div class="col-lg-6 col-12">
-                                     <input class="form-control" type="time" name="bb-time" value="18:30" />
+                                     <input class="form-control" type="time" name="time" value="18:30" />
                                  </div>
 
                                  <div class="col-lg-6 col-12">
-                                     <select class="form-select form-control" name="bb-branch" id="bb-branch"
+                                     <select class="form-select form-control" name="branch" id="bb-branch"
                                          aria-label="Default select example">
                                          <option selected="">Select Branches</option>
                                          <option value="Grünberger">Grünberger</option>
@@ -221,17 +221,17 @@
 
                                  </div>
                                  <div class="col-lg-6 col-12">
-                                     <input type="date" name="bb-date" id="bb-date" class="form-control"
+                                     <input type="date" name="date" id="bb-date" class="form-control"
                                          placeholder="Date" required>
                                  </div>
 
                                  <div class="col-lg-6 col-12">
-                                     <input type="number" name="bb-number" id="bb-number" class="form-control"
+                                     <input type="number" name="number" id="bb-number" class="form-control"
                                          placeholder="Number of People" required>
                                  </div>
                              </div>
 
-                             <textarea name="bb-message" rows="3" class="form-control" id="bb-message" placeholder="Comment (Optionals)"></textarea>
+                             <textarea name="bb-message" rows="3" class="form-control" id="message" placeholder="Comment (Optionals)"></textarea>
 
                              <div class="col-lg-4 col-md-10 col-8 mx-auto">
                                  <button type="submit" class="form-control">Submit</button>
