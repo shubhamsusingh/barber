@@ -184,8 +184,9 @@
              <div class="row">
 
                  <div class="col-lg-10 col-12 mx-auto">
-                     <form action="#" method="post" class="custom-form booking-form" id="bb-booking-form"
-                         role="form">
+                     <form action="{{ route('contactform') }}" method="POST" class="custom-form booking-form"
+                         id="bb-booking-form" role="form">
+                         @csrf
                          <div class="text-center mb-5">
                              <h2 class="mb-1">Book a seat</h2>
 
@@ -196,14 +197,13 @@
                              <div class="row">
 
                                  <div class="col-lg-6 col-12">
-                                     <input type="text" name="bb-name" id="bb-name" class="form-control"
+                                     <input type="text" name="name" id="bb-name" class="form-control"
                                          placeholder="Full name" required>
                                  </div>
 
                                  <div class="col-lg-6 col-12">
                                      <input type="tel" class="form-control" name="bb-phone"
-                                         placeholder="Mobile 010-020-0340" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                         required="">
+                                         placeholder="Mobile 010-020-0340" required="">
                                  </div>
 
                                  <div class="col-lg-6 col-12">
