@@ -7,6 +7,13 @@ public function index(Request $request)
     {
         return view('contect.index');
     }
+    public function storeContact(Request $request){
+        $name = $request->input('name');
+        echo $name;
+        exit;
+
+     }
 }
+
 
 ?>
