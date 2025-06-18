@@ -84,7 +84,7 @@ https://templatemo.com/tm-585-barber-shop
                         <ul class="nav flex-column">
                             @guest
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Login</a>
+                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">Register</a>

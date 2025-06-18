@@ -20,3 +20,5 @@ Route::get('price',[PriceController::class,'index'])->name('price');
 Route::post('contactform',[ContectController::class,'storeContact'])->name('contactform');
 Route::get('register',[AuthController::class,'index'])->name('register');
 Route::post('register',[AuthController::class,'register'])->name('register');
+Route::get('login',[AuthController::class,'getloginPage'])->name('login');
+Route::post('login',[AuthController::class,'postLogin'])->name('login');
