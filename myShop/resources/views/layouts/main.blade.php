@@ -100,7 +100,8 @@ https://templatemo.com/tm-585-barber-shop
                                             Logout
                                         </button>
                                     </form> --}}
-                                    <a class="nav-link" href="#" style="background-color: rgb(243, 86, 86)">Logout</a>
+                                    <a class="nav-link" href="{{ route('logout') }}"
+                                        style="background-color: rgb(243, 86, 86)">Logout</a>
                                 </li>
                             @endauth
                         </ul>
