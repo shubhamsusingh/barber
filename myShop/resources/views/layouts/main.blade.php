@@ -79,6 +79,31 @@ https://templatemo.com/tm-585-barber-shop
                             <a class="nav-link" href="{{ route('contect') }}">Contact</a>
                         </li>
                     </ul>
+                    <!-- Auth Links in a Separate Box -->
+                    <div class="w-100 px-3 py-3 mt-4" style="background-color: #b6ad7a; border-top: 1px solid #ccc;">
+                        <ul class="nav flex-column">
+                            @guest
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Register</a>
+                                </li>
+                            @endguest
+
+                            @auth
+                                <li class="nav-item">
+                                    <form method="POST" action="#">
+                                        @csrf
+                                        <button class="nav-link btn btn-link text-start" type="submit"
+                                            style="padding: 0; border: none; background: none;">
+                                            Logout
+                                        </button>
+                                    </form>
+                                </li>
+                            @endauth
+                        </ul>
+                    </div>
                 </div>
             </nav>
 
