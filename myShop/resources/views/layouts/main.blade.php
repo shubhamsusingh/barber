@@ -92,14 +92,15 @@ https://templatemo.com/tm-585-barber-shop
                             @endguest
 
                             @auth
-                                <li class="nav-item">
-                                    <form method="POST" action="#">
+                                <li class="nav-item ">
+                                    {{-- <form method="POST" action="#">
                                         @csrf
-                                        <button class="nav-link btn btn-link text-start" type="submit"
+                                        <button class="nav-link btn btn-link text-start " type="submit"
                                             style="padding: 0; border: none; background: none;">
                                             Logout
                                         </button>
-                                    </form>
+                                    </form> --}}
+                                    <a class="nav-link" href="#" style="background-color: rgb(243, 86, 86)">Logout</a>
                                 </li>
                             @endauth
                         </ul>

@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable; // ✅ Required
+use Illuminate\Notifications\Notifiable;
 
-class User extends Model
+class User extends Authenticatable // ✅ Must extend this
 {
-    use HasFactory;
+    use Notifiable;
 
-    protected $table = 'user';
+    protected $table = 'user'; // ✅ Your custom table name
 
     public $timestamps = false;
 
@@ -17,6 +17,4 @@ class User extends Model
         'email',
         'password'
     ];
-
-
 }
