@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Session;
 use Jenssegers\Agent\Agent;
 use Illuminate\Support\Facades\Auth;
 
-
 class AuthController extends Controller
 {
     public function index(Request $request)
@@ -44,7 +43,7 @@ class AuthController extends Controller
         $user = User::where('email', $request->input('email'))->first();
         if ($user && Hash::check($request->input('password'), $user->password)) {
             // Store user info in session
-             Auth::login($user);
+            Auth::login($user);
             Session::put('user_id', $user->id);
             Session::put('user_name', $user->name);
             Session::put('user_email', $user->email);
@@ -53,13 +52,12 @@ class AuthController extends Controller
             Session::put('browser', $agent->browser());
             Session::put('platform', $agent->platform());
             \Log::info('Login detected', [
-    'user_id' => $user->id,
-    'device' => $agent->device(),
-    'browser' => $agent->browser(),
-    'platform' => $agent->platform(),
-    'ip' => $request->ip()
-]);
-
+                'user_id' => $user->id,
+                'device' => $agent->device(),
+                'browser' => $agent->browser(),
+                'platform' => $agent->platform(),
+                'ip' => $request->ip(),
+            ]);
 
             return redirect('/');
         } else {
@@ -67,6 +65,15 @@ class AuthController extends Controller
         }
         // print_r($user);
         // exit;
+    }
+     public function logout(Request $request)
+    {
+        Auth::logout(); // Logs the user out
+
+        $request->session()->invalidate(); // Invalidate the session
+        $request->session()->regenerateToken(); // Regenerate CSRF token
+
+        return redirect('/login')->with('success', 'You have been logged out.');
     }
 }
 ?>
