@@ -7,6 +7,7 @@ use App\Http\Controllers\StoryController;
 use App\Http\Controllers\ContectController;
 use App\Http\Controllers\ServicsController;
 use App\Http\Controllers\PriceController;
+use App\Http\Controllers\AuthController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -17,3 +18,5 @@ Route::get('contect',[ContectController::class,'index'])->name('contect');
 Route::get('service',[ServicsController::class,'index'])->name('service');
 Route::get('price',[PriceController::class,'index'])->name('price');
 Route::post('contactform',[ContectController::class,'storeContact'])->name('contactform');
+Route::get('register',[AuthController::class,'index'])->name('register');
+Route::post('register',[AuthController::class,'register'])->name('register');
