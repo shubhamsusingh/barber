@@ -8,6 +8,8 @@ use App\Models\User; // Make sure User model is imported
 // use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Session;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Auth;
+
 
 class AuthController extends Controller
 {
@@ -42,6 +44,7 @@ class AuthController extends Controller
         $user = User::where('email', $request->input('email'))->first();
         if ($user && Hash::check($request->input('password'), $user->password)) {
             // Store user info in session
+             Auth::login($user);
             Session::put('user_id', $user->id);
             Session::put('user_name', $user->name);
             Session::put('user_email', $user->email);
