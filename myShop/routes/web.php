@@ -8,6 +8,7 @@ use App\Http\Controllers\ContectController;
 use App\Http\Controllers\ServicsController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PaymentController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -28,3 +29,4 @@ Route::post('register',[AuthController::class,'register'])->name('register');
 Route::get('login',[AuthController::class,'getloginPage'])->name('login');
 Route::post('login',[AuthController::class,'postLogin'])->name('login');
 Route::get('logout',[AuthController::class,'logout'])->name('logout');
+Route::post('payment',[PaymentController::class,'index'])->name('payment');

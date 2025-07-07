@@ -1,0 +1,32 @@
+<?php
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Srmklive\PayPal\Services\PayPal as PayPalClient;
+class PaymentController extends Controller
+{
+    public function index(Request $request)
+    {
+        $provider = new PayPalClient();
+        $provider->setApiCredentials(config('paypal'));
+        $paypalToken = $provider->getAccessToken();
+      $response=  $provider->createOrder([
+            'intent' => 'CAPTURE',
+            "application_context"=>[
+                "return_url"=>route("service"),
+                "cancel_url"=>route("price"),
+            ],
+            'purchase_units' => [
+                [
+                    'amount' => [
+                        'currency_code' => 'USD',
+                        'value' => $request->price,
+                    ],
+                ],
+            ],
+        ]);
+        dd($response);
+    }
+}
+
+?>

@@ -126,15 +126,22 @@
                  </div>
 
                  <div class="col-lg-6 col-12 mb-4">
-                     <div class="services-thumb">
-                         <img src="{{ asset('assets/images/services/woman-cutting-hair-man-salon.jpg') }}"
-                             class="services-image img-fluid" alt="">
-                         <div class="services-info d-flex align-items-end">
-                             <h4 class="mb-0">Hair cut</h4>
+                     <form action="payment" method="post">
+                         @csrf
+                         <input type="hidden" name="price" value="80">
+                         <input type="hidden" name="product_name" value="hair-cut">
+                         <button type="submit">
+                             <div class="services-thumb">
+                                 <img src="{{ asset('assets/images/services/woman-cutting-hair-man-salon.jpg') }}"
+                                     class="services-image img-fluid" alt="">
+                                 <div class="services-info d-flex align-items-end">
+                                     <h4 class="mb-0">Hair cut</h4>
 
-                             <strong class="services-thumb-price">₹80.00</strong>
-                         </div>
-                     </div>
+                                     <strong class="services-thumb-price">₹80.00</strong>
+                                 </div>
+                             </div>
+                         </button>
+                     </form>
                  </div>
 
                  <div class="col-lg-6 col-12 mb-4">
