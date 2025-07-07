@@ -13,7 +13,7 @@ class PaymentController extends Controller
       $response=  $provider->createOrder([
             'intent' => 'CAPTURE',
             "application_context"=>[
-                "return_url"=>route("service"),
+                "return_url"=>route("success"),
                 "cancel_url"=>route("price"),
             ],
             'purchase_units' => [
@@ -35,6 +35,14 @@ class PaymentController extends Controller
         }else{
             return redirect()->route('price');
         }
+    }
+
+    public function success(Request $request){
+        $provider = new PayPalClient();
+        $provider->setApiCredentials(config('paypal'));
+        $paypalToken = $provider->getAccessToken();
+        $response=$provider->capturePaymentOrder($request->token);
+        dd($response);
     }
 }
 

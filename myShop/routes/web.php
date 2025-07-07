@@ -30,3 +30,4 @@ Route::get('login',[AuthController::class,'getloginPage'])->name('login');
 Route::post('login',[AuthController::class,'postLogin'])->name('login');
 Route::get('logout',[AuthController::class,'logout'])->name('logout');
 Route::post('payment',[PaymentController::class,'index'])->name('payment');
+Route::get('success',[PaymentController::class,'success'])->name('success');
