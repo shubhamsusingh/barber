@@ -129,7 +129,7 @@
                      <form action="payment" method="post">
                          @csrf
                          <input type="hidden" name="price" value="80">
-                         <input type="hidden" name="product_name" value="hair-cut">
+                         <input type="hidden" name="service_name" value="hair-cut">
                          <button type="submit">
                              <div class="services-thumb">
                                  <img src="{{ asset('assets/images/services/woman-cutting-hair-man-salon.jpg') }}"
