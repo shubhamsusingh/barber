@@ -1,7 +1,6 @@
 [phases.setup]
 nixPkgs = [
   "php",
-  "composer",
   "php81Extensions.pdo",
   "php81Extensions.pdo_mysql",
   "php81Extensions.mbstring",
@@ -12,7 +11,9 @@ nixPkgs = [
   "php81Extensions.bcmath"
 ]
 
+# Add composer specifically to build phase
 [phases.build]
+nixPkgs = ["composer"]
 cmds = [
   "composer install --no-dev --optimize-autoloader"
 ]
