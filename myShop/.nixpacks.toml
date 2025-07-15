@@ -1,15 +1,15 @@
 [phases.setup]
 nixPkgs = [
-  "php",
+  "php82",
   "composer",
-  "php81Extensions.pdo",
-  "php81Extensions.pdo_mysql",
-  "php81Extensions.mbstring",
-  "php81Extensions.tokenizer",
-  "php81Extensions.openssl",
-  "php81Extensions.curl",
-  "php81Extensions.fileinfo",
-  "php81Extensions.bcmath"
+  "php82Extensions.pdo",
+  "php82Extensions.pdo_mysql",
+  "php82Extensions.mbstring",
+  "php82Extensions.tokenizer",
+  "php82Extensions.openssl",
+  "php82Extensions.curl",
+  "php82Extensions.fileinfo",
+  "php82Extensions.bcmath"
 ]
 
 [phases.build]
@@ -18,4 +18,7 @@ cmds = [
 ]
 
 [start]
-cmd = "php artisan key:generate && php artisan migrate --force && php artisan storage:link && php artisan serve --host 0.0.0.0 --port $PORT"
+cmd = "php artisan serve --host 0.0.0.0 --port $PORT"
+
+[postdeploy]
+cmd = "php artisan key:generate && php artisan migrate --force && php artisan storage:link"
