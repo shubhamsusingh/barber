@@ -1,2 +1,21 @@
 [phases.setup]
-nixPkgs = ["php", "php81Packages.composer", "php81Packages.php-cs-fixer", "php81Packages.phpstan", "php81Packages.phpunit", "php81Extensions.pdo_mysql"]
+nixPkgs = [
+  "php",
+  "php81Packages.composer",
+  "php81Extensions.pdo",
+  "php81Extensions.pdo_mysql",
+  "php81Extensions.mbstring",
+  "php81Extensions.tokenizer",
+  "php81Extensions.openssl",
+  "php81Extensions.curl",
+  "php81Extensions.fileinfo",
+  "php81Extensions.bcmath"
+]
+
+[phases.build]
+cmds = [
+  "composer install --no-dev --optimize-autoloader"
+]
+
+[start]
+cmd = "php artisan key:generate && php artisan migrate --force && php artisan storage:link && php artisan serve --host 0.0.0.0 --port $PORT"
